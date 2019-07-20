@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/img_asset">
+        <file>icon_asset/2x_node.png</file>
+        <file>icon_asset/2x_leaf.png</file>
+        <file>icon_asset/TIM图片20190705170006.png</file>
+        <file>icon_asset/2x_node.png</file>
+        <file>icon_asset/2x_round-chart1-4-71.png</file>
+        <file>icon_asset/2x_leaf.png</file>
+        <file>icon_asset/2x_user-round_black.png</file>
+        <file>icon_asset/2x_user-round.png</file>
+        <file>icon_asset/TIM截图20190706102442.jpg</file>
+        <file>icon_asset/2x_control-4.png</file>
+        <file>icon_asset/background.png</file>
+        <file>icon_asset/background_right.png</file>
+        <file>icon_asset/btn-1_1.png</file>
+        <file>icon_asset/btn-1_2.png</file>
+        <file>icon_asset/btn-2_1.png</file>
+        <file>icon_asset/btn-2_2.png</file>
+        <file>icon_asset/btn-3_1.png</file>
+        <file>icon_asset/btn-3_2.png</file>
+        <file>icon_asset/2x_down-play.png</file>
+        <file>icon_asset/TIM截图20190706092456.jpg</file>
+        <file>icon_asset/2x_user-round_black.png</file>
+        <file>icon_asset/2x_user-round.png</file>
+        <file>icon_asset/background_test_ao.jpg</file>
+        <file>icon_asset/TIM截图20190706102442.jpg</file>
+        <file>icon_asset/2x_control-4.png</file>
+        <file>icon_asset/2x_flag-1.png</file>
+        <file>icon_asset/2x_locate-1.png</file>
+        <file>icon_asset/2x_locate-5.png</file>
+        <file>icon_asset/2x_pin-32.png</file>
+        <file>icon_asset/2x_graph-x.png</file>
+        <file>icon_asset/2x_delete-user-rd.png</file>
+        <file>icon_asset/2x_surprised.png</file>
+        <file>icon_asset/2x_laughter.png</file>
+        <file>icon_asset/2x_what the --.png</file>
+        <file>icon_asset/2x_dejection.png</file>
+        <file>icon_asset/2x_save-page.png</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

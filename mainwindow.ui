@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>640</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>640</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>BillBoard</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>:/img_asset/icon_asset/2x_save-page.png</normalon>
+   </iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="mainContent" native="true">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>0</y>
+      <width>760</width>
+      <height>640</height>
+     </rect>
+    </property>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>760</width>
+       <height>640</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#stackedWidget{
+	border-image: url(:/img_asset/icon_asset/background.png);
+}
+</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="dailyBoardPage">
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/img_asset/icon_asset/background.png);</string>
+      </property>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>760</width>
+         <height>640</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="tabShape">
+        <enum>QTabWidget::Triangular</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="dailyBoardContent">
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/img_asset/icon_asset/background.png);</string>
+        </property>
+        <attribute name="title">
+         <string>每日账本</string>
+        </attribute>
+        <widget class="QPushButton" name="addItemButton">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>500</y>
+           <width>80</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/img_asset/icon_asset/2x_leaf.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>80</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QListWidget" name="itemListWidget">
+         <property name="geometry">
+          <rect>
+           <x>-10</x>
+           <y>0</y>
+           <width>771</width>
+           <height>640</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei UI</family>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="edit_pushButton">
+         <property name="geometry">
+          <rect>
+           <x>390</x>
+           <y>500</y>
+           <width>80</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>编辑</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="delet_pushButton_2">
+         <property name="geometry">
+          <rect>
+           <x>520</x>
+           <y>500</y>
+           <width>80</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>删除</string>
+         </property>
+        </widget>
+        <zorder>delet_pushButton_2</zorder>
+        <zorder>edit_pushButton</zorder>
+        <zorder>itemListWidget</zorder>
+        <zorder>addItemButton</zorder>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+         </font>
+        </property>
+        <attribute name="title">
+         <string>未命名</string>
+        </attribute>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="chartAnalysisPage">
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/img_asset/icon_asset/background.png);</string>
+      </property>
+      <widget class="QComboBox" name="monthSelector">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>50</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox::down-arrow {
+image: url(:/img_asset/icon_asset/2x_down-play.png);
+  }
+QComboBox {
+      border: 1px solid gray;
+      border-radius: 3px;
+      padding: 1px 18px 1px 3px;
+      min-width: 6em;
+  }</string>
+       </property>
+       <property name="duplicatesEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>1月</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2月</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3月</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4月</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5月</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6月</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7月</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8月</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9月</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>10月</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>11月</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>12月</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QtCharts::QChartView" name="chartViewer">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>100</y>
+         <width>531</width>
+         <height>291</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="selectPieChart">
+       <property name="geometry">
+        <rect>
+         <x>520</x>
+         <y>40</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+      border: 1px solid #8f8f91;
+      border-radius: 6px;
+  }</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/img_asset/icon_asset/2x_round-chart1-4-71.png</normalon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="selectLinerChart">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>40</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+      border: 1px solid #8f8f91;
+      border-radius: 6px;
+  }</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/img_asset/icon_asset/2x_graph-x.png</normalon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <zorder>chartViewer</zorder>
+      <zorder>monthSelector</zorder>
+      <zorder>selectPieChart</zorder>
+      <zorder>selectLinerChart</zorder>
+     </widget>
+     <widget class="QWidget" name="bugetSettingPage">
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/img_asset/icon_asset/background.png);</string>
+      </property>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>40</y>
+         <width>650</width>
+         <height>120</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#widget{border-image: url(:/img_asset/icon_asset/background_left.png);}</string>
+       </property>
+       <widget class="QLabel" name="dayBudgetSetlabel">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>311</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>每日预算：</string>
+        </property>
+       </widget>
+       <widget class="QProgressBar" name="dayprogressBar">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>631</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+         </font>
+        </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QProgressBar {
+    border: 3px solid grey;
+    border-radius: 8px;
+ 	text-align: center;
+}
+
+QProgressBar::chunk {
+background-color: rgb(85, 170, 255);
+}</string>
+        </property>
+        <property name="value">
+         <number>24</number>
+        </property>
+        <property name="textVisible">
+         <bool>true</bool>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="textDirection">
+         <enum>QProgressBar::TopToBottom</enum>
+        </property>
+        <property name="format">
+         <string>%p%</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="dayBudgetSetButton">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>90</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>设置</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/img_asset/icon_asset/2x_control-4.png</normalon>
+         </iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>180</y>
+         <width>650</width>
+         <height>120</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#widget_2 {
+border-image: url(:/img_asset/icon_asset/background_left.png)}</string>
+       </property>
+       <widget class="QLabel" name="monthBudgetSetlabel">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>311</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>每月预算：</string>
+        </property>
+       </widget>
+       <widget class="QProgressBar" name="monthprogressBar">
+        <property name="geometry">
+         <rect>
+          <x>17</x>
+          <y>50</y>
+          <width>631</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QProgressBar {
+    border: 3px solid grey;
+    border-radius: 8px;
+ 	text-align: center;
+}
+
+QProgressBar::chunk {
+background-color: rgb(85, 170, 255);
+}</string>
+        </property>
+        <property name="value">
+         <number>24</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="monthBudgetSetButton">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>90</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>设置</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/img_asset/icon_asset/2x_control-4.png</normalon>
+         </iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget_3" native="true">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>320</y>
+         <width>650</width>
+         <height>120</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/img_asset/icon_asset/background_left.png);</string>
+       </property>
+       <widget class="QLabel" name="yearBudgetSetlabel">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>311</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>每年预算：</string>
+        </property>
+       </widget>
+       <widget class="QProgressBar" name="yearprogressBar">
+        <property name="geometry">
+         <rect>
+          <x>17</x>
+          <y>50</y>
+          <width>631</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QProgressBar {
+    border: 3px solid grey;
+    border-radius: 8px;
+ 	text-align: center;
+}
+
+QProgressBar::chunk {
+background-color: rgb(85, 170, 255);
+}</string>
+        </property>
+        <property name="value">
+         <number>24</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="yearBudgetSetButton">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>90</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>设置</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/img_asset/icon_asset/2x_control-4.png</normalon>
+         </iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>28</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="sideBar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>200</width>
+      <height>640</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/img_asset/icon_asset/TIM截图20190706102442.jpg);</string>
+    </property>
+    <widget class="QPushButton" name="dailyBoardButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>180</y>
+       <width>200</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normalon>:/img_asset/icon_asset/btn-3_1.png</normalon>
+       <activeon>:/img_asset/icon_asset/btn-3_2.png</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>200</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="chartAnalysisButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>240</y>
+       <width>200</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normalon>:/img_asset/icon_asset/btn-2_1.png</normalon>
+       <activeon>:/img_asset/icon_asset/btn-2_2.png</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>200</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bugetSettingButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>300</y>
+       <width>200</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normalon>:/img_asset/icon_asset/btn-1_1.png</normalon>
+       <activeon>:/img_asset/icon_asset/btn-1_2.png</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>200</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QFrame" name="userAvatar">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>200</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QPushButton" name="userAvatarPic">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>40</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/img_asset/icon_asset/2x_user-round.png</normalon>
+        <activeon>:/img_asset/icon_asset/2x_user-round.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>75</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="clearButton">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>480</y>
+       <width>80</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>清空</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>170</y>
+       <width>200</width>
+       <height>0</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>dailyBoardButton</zorder>
+    <zorder>chartAnalysisButton</zorder>
+    <zorder>bugetSettingButton</zorder>
+    <zorder>userAvatar</zorder>
+    <zorder>clearButton</zorder>
+   </widget>
+   <zorder>sideBar</zorder>
+   <zorder>mainContent</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QtCharts::QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">qchartview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
